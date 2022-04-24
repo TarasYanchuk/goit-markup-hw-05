@@ -48,7 +48,7 @@ img {
 .backdrop {
   position: fixed;
   width: 100%;
-  height: 1024px;
+  height: 100%;
   top: 0;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -61,8 +61,13 @@ img {
   height: 581px;
   background-color: var(--primary-bg-color);
   border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .modal-button {
+  cursor: pointer;
+  background-color: var(--primary-bg-color);
+  color: #0000;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -100,10 +105,6 @@ img {
 .header {
   border-bottom: solid 1px #ececec;
 }
-.header .link {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
 .header-nav,
 .nav {
   display: flex;
@@ -113,6 +114,7 @@ img {
 .page-header {
   display: flex;
   margin-top: 32px;
+  margin-bottom: 32px;
   margin-left: auto;
   padding: 0;
 }
@@ -127,43 +129,47 @@ img {
   letter-spacing: 0.02em;
 }
 .site-nav .link.current {
+  position: relative;
   color: var(--accent-text-color);
 }
 .site-nav .link.current::after {
+  left: 0;
+  bottom: -34px;
+  position: absolute;
   content: "";
-  display: block;
-  margin-top: 28px;
+  display: inline-block;
   width: 100%;
   height: 4px;
   background-color: var(--accent-text-color);
   border-radius: 2px;
 }
 .site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav .link:focus,
+.page-header .link:hover,
+.page-header .link:focus,
+.page-header .link:hover .contacts-icon {
   color: var(--accent-text-color);
+  fill: var(--accent-text-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .page-header .item.item:not(:last-child) {
   margin-right: 50px;
   margin-left: auto;
 }
-.page-header .contact {
-  margin-bottom: 32px;
-  display: inline-flex;
+.page-header .link {
+  display: flex;
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.page-header .link {
-  color: var(--primary-bg-color);
-}
-.page-header .contact:hover,
-.page-header .contact:focus,
-.contacts-icon:hover,
-.contacts-icon:focus {
+/* .page-header .link {
+  color: var(--primary-bg-color); */
+.page-header .link:hover,
+.page-header .link:focus {
   color: var(--accent-text-color);
-  fill: var(--accent-text-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-icon {
   fill: var(--secondary-text-color);
@@ -205,7 +211,7 @@ img {
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 .button-primary {
   display: inline-block;
@@ -225,6 +231,7 @@ img {
 .button-primary:focus {
   color: var(--primary-bg-color);
   background-color: #188ce8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*section*/
 .section-about {
@@ -267,9 +274,11 @@ img {
 }
 /*Work-photo*/
 .work-title {
+  justify-content: center;
+  display: flex;
+  align-items: center;
   position: absolute;
   margin: 0;
-  padding-top: 27px;
   bottom: 0;
   width: 100%;
   height: 70px;
@@ -279,7 +288,6 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: center;
   letter-spacing: 0.03em;
 }
 .work-photo .item {
@@ -371,6 +379,7 @@ img {
 .social-link:focus {
   background-color: var(--accent-text-color);
   fill: var(--primary-bg-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list {
   display: flex;
@@ -400,6 +409,7 @@ img {
 .clients-link:hover {
   border-color: var(--accent-text-color);
   fill: var(--accent-text-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Portfolio*/
@@ -422,6 +432,9 @@ img {
 .button-nav .button:hover {
   color: var(--primary-bg-color);
   background-color: var(--accent-text-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.accent {
   background-color: var(--accent-text-color);
@@ -485,6 +498,7 @@ img {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .breadcrumbs-text {
   position: relative;
@@ -497,7 +511,7 @@ img {
   line-height: 1.55;
   color: var(--primary-bg-color);
   background: rgba(33, 150, 243, 0.9);
-  padding: 24px 63px 24px 63px;
+  padding: 63px 24px 63px 24px;
   position: absolute;
   top: 0;
   left: 0;
@@ -508,6 +522,7 @@ img {
 }
 .flex-elements:hover .breadcrumbs-about {
   transform: translateY(0);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Footer*/
 .footer .logo {
@@ -577,4 +592,5 @@ img {
 .footer-social .social-link:hover,
 .footer-social .social-link:focus {
   background-color: var(--accent-text-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
