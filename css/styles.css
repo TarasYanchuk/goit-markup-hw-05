@@ -66,6 +66,8 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .modal-button {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   background-color: var(--primary-bg-color);
   color: #0000;
@@ -129,6 +131,7 @@ img {
   font-size: 14px;
   line-height: 1.15;
   letter-spacing: 0.02em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link.current {
   position: relative;
@@ -136,7 +139,7 @@ img {
 }
 .site-nav .link.current::after {
   left: 0;
-  bottom: -34px;
+  bottom: -33px;
   position: absolute;
   content: "";
   display: inline-block;
@@ -152,7 +155,6 @@ img {
 .page-header .link:hover .contacts-icon {
   color: var(--accent-text-color);
   fill: var(--accent-text-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .page-header .item.item:not(:last-child) {
   margin-right: 50px;
@@ -165,13 +167,13 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* .page-header .link {
   color: var(--primary-bg-color); */
 .page-header .link:hover,
 .page-header .link:focus {
   color: var(--accent-text-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-icon {
   fill: var(--secondary-text-color);
@@ -228,12 +230,12 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-primary:hover,
 .button-primary:focus {
   color: var(--primary-bg-color);
   background-color: #188ce8;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*section*/
 .section-about {
@@ -376,12 +378,12 @@ img {
 }
 .social-link {
   fill: #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-text-color);
   fill: var(--primary-bg-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list {
   display: flex;
@@ -406,12 +408,12 @@ img {
 }
 .clients-link {
   fill: #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:focus,
 .clients-link:hover {
   border-color: var(--accent-text-color);
   fill: var(--accent-text-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Portfolio*/
@@ -429,6 +431,7 @@ img {
   background-color: var(--button-bg-color);
   margin-left: auto;
   margin-right: auto;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-nav .button:focus,
 .button-nav .button:hover {
@@ -436,11 +439,12 @@ img {
   background-color: var(--accent-text-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.accent {
   background-color: var(--accent-text-color);
   color: var(--primary-bg-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /*Portfolio-works*/
 /* .flex-elements {
@@ -460,6 +464,9 @@ img {
   flex-wrap: wrap;
   margin-right: -30px;
   margin-bottom: -30px;
+}
+.breadcrumbs .list {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .breadcrumbs .flex-elements {
   display: block;
@@ -500,7 +507,6 @@ img {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .breadcrumbs-text {
   position: relative;
@@ -520,11 +526,10 @@ img {
   height: 100%;
   margin: 0;
   transform: translateY(100%);
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .flex-elements:hover .breadcrumbs-about {
   transform: translateY(0);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Footer*/
 .footer .logo {
@@ -590,9 +595,9 @@ img {
 .footer-social .social-link {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--primary-bg-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social .social-link:hover,
 .footer-social .social-link:focus {
   background-color: var(--accent-text-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
